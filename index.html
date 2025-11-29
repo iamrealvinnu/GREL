@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marss - Premium Real Estate</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="premium-body">
+
+    <!-- Fixed Transparent Header - Always Visible on Hero -->
+    <header class="premium-header-fixed">
+        <nav class="navbar navbar-expand-lg navbar-glassmorphism-enhanced">
+            <div class="container-fluid">
+                <a class="navbar-brand premium-brand" href="index.html">
+                    <i class="bi bi-house-heart-fill me-2"></i>Marss
+                </a>
+                <button class="navbar-toggler premium-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto premium-nav">
+                        <li class="nav-item"><a class="nav-link premium-link active" href="index.html"><i class="bi bi-house-door me-1"></i>Home</a></li>
+                        <li class="nav-item"><a class="nav-link premium-link" href="buy.html"><i class="bi bi-cart-check me-1"></i>Buy</a></li>
+                        <li class="nav-item"><a class="nav-link premium-link" href="rent.html"><i class="bi bi-key me-1"></i>Rent</a></li>
+                        <li class="nav-item"><a class="nav-link premium-link" href="sell.html"><i class="bi bi-tag-fill me-1"></i>Sell</a></li>
+                        <li class="nav-item"><a class="nav-link premium-link" href="property-management.html"><i class="bi bi-building-gear me-1"></i>Management</a></li>
+                        <li class="nav-item"><a class="nav-link premium-link" href="services.html"><i class="bi bi-gear-wide-connected me-1"></i>Services</a></li>
+                        <li class="nav-item"><a class="nav-link premium-link" href="loan-assistance.html"><i class="bi bi-bank me-1"></i>Loans</a></li>
+                        <li class="nav-item"><a class="nav-link premium-link" href="legal-guidance.html"><i class="bi bi-file-earmark-text me-1"></i>Legal</a></li>
+                        <li class="nav-item"><a class="nav-link premium-link" href="contact.html"><i class="bi bi-envelope me-1"></i>Contact</a></li>
+                        <li class="nav-item"><a class="nav-link premium-link" href="about-us.html"><i class="bi bi-people me-1"></i>About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section - No Dark/Blue Overlay + Header Visible -->
+    <section id="hero" class="premium-hero">
+        <video autoplay muted loop playsinline class="hero-video-enhanced">
+            <source src="https://www.pexels.com/download/video/4770380/" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Only a subtle dark overlay for text readability -->
+        <div class="hero-overlay-subtle"></div>
+
+        <div class="container hero-content-enhanced text-white text-center position-relative">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="display-3 premium-hero-title animate-fade-in-up">Discover Your Dream Property</h1>
+                    <p class="lead premium-hero-subtitle animate-fade-in-up delay-1">
+                        Marss: Where luxury meets opportunity. Premium properties for discerning clients. Your legacy starts here.
+                    </p>
+                    <div class="d-flex justify-content-center gap-3 mb-5 animate-fade-in-up delay-2">
+                        <a href="buy.html" class="btn btn-light btn-lg premium-btn-gold shadow-lg">
+                            <i class="bi bi-house-fill me-2"></i>Explore Premium Buys
+                        </a>
+                        <a href="sell.html" class="btn btn-outline-light btn-lg premium-btn shadow-lg">
+                            <i class="bi bi-graph-up me-2"></i>Maximize Your Sale
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Premium Search Bar -->
+            <div class="row justify-content-center mt-5">
+                <div class="col-xl-10">
+                    <div class="premium-search-card animate-slide-in-up delay-3">
+                        <div class="search-row">
+                            <div class="search-group">
+                                <i class="bi bi-search premium-icon"></i>
+                                <input type="search" class="form-control premium-input" placeholder="Enter location, project, or area..." id="searchBox">
+                            </div>
+                            <div class="search-group">
+                                <i class="bi bi-house-door premium-icon"></i>
+                                <select class="form-select premium-select" id="propertyType">
+                                    <option value="">Any Property Type</option>
+                                    <option>Luxury Apartment</option>
+                                    <option>Grand Villa</option>
+                                    <option>Prime Plot</option>
+                                </select>
+                            </div>
+                            <div class="search-group">
+                                <i class="bi bi-bed premium-icon"></i>
+                                <select class="form-select premium-select" id="roomType">
+                                    <option value="">Any Configuration</option>
+                                    <option>1 RK Studio</option>
+                                    <option>1 BHK Compact</option>
+                                    <option>2 BHK Family</option>
+                                    <option>3 BHK Executive</option>
+                                    <option>4 BHK Luxury</option>
+                                    <option>5+ BHK Estate</option>
+                                </select>
+                            </div>
+                            <button class="btn premium-search-btn" id="mainSearchButton">
+                                <i class="bi bi-arrow-right me-2"></i>Discover Elite Properties
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Category Navigation with Icons -->
+    <section id="category-navigation" class="premium-section py-5 bg-gradient-light">
+        <div class="container">
+            <h2 class="text-center premium-heading mb-5 animate-fade-in">Curated Collections</h2>
+            <div class="d-flex justify-content-center flex-wrap gap-3">
+                <a href="buy.html?type=apartment" class="premium-category-btn animate-slide-in-left delay-0">
+                    <i class="bi bi-building premium-category-icon"></i>
+                    <span>Apartments</span>
+                </a>
+                <a href="buy.html?type=villa" class="premium-category-btn animate-slide-in-left delay-1">
+                    <i class="bi bi-house premium-category-icon"></i>
+                    <span>Villas</span>
+                </a>
+                <a href="buy.html?type=plot" class="premium-category-btn animate-slide-in-left delay-2">
+                    <i class="bi bi-geo-alt premium-category-icon"></i>
+                    <span>Plots</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Why Choose Us - Grid with Icons -->
+    <section id="why-choose-us" class="premium-section py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center premium-heading mb-5 animate-fade-in">Why Marss Stands Supreme</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="premium-card h-100 text-center p-4 animate-slide-in-up delay-0">
+                        <div class="premium-icon-circle bg-primary text-white mb-3">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h5 class="premium-card-title">Unrivaled Expertise</h5>
+                        <p class="premium-card-text">Elite advisors crafting bespoke journeys with insider market intelligence.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="premium-card h-100 text-center p-4 animate-slide-in-up delay-1">
+                        <div class="premium-icon-circle bg-gold text-primary mb-3">
+                            <i class="bi bi-gem"></i>
+                        </div>
+                        <h5 class="premium-card-title">Exquisite Portfolio</h5>
+                        <p class="premium-card-text">Curated gems from skyline penthouses to serene estates, unmatched selection.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="premium-card h-100 text-center p-4 animate-slide-in-up delay-2">
+                        <div class="premium-icon-circle bg-secondary text-white mb-3">
+                            <i class="bi bi-lightning-charge"></i>
+                        </div>
+                        <h5 class="premium-card-title">Seamless Symphony</h5>
+                        <p class="premium-card-text">AI-driven precision and human touch for an effortless, enchanting experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Featured Properties - Airbnb-Style Cards -->
+    <section id="featured-properties" class="premium-section py-5 bg-gradient-light">
+        <div class="container">
+            <h2 class="text-center premium-heading mb-5 animate-fade-in">Featured Masterpieces</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="premium-property-card h-100 animate-slide-in-up delay-0">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=500&fit=crop" class="card-img-top premium-img" alt="Modern Apartment">
+                            <div class="premium-badge position-absolute top-3 start-3">
+                                <i class="bi bi-star-fill text-warning me-1"></i>Featured
+                            </div>
+                            <div class="premium-heart position-absolute end-3 top-3">
+                                <i class="bi bi-heart"></i>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <h5 class="premium-property-title">Skyline Modern Apartment</h5>
+                            <div class="premium-meta d-flex justify-content-between align-items-center mb-2">
+                                <span class="premium-rating"><i class="bi bi-star-fill text-warning"></i> 4.9</span>
+                                <span class="premium-location"><i class="bi bi-geo-alt me-1"></i>Downtown Elite</span>
+                            </div>
+                            <p class="premium-desc mb-3">3BR | 2BA | 1500 sq ft | Panoramic views</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h6 class="premium-price mb-0">₹1.5 Cr</h6>
+                                <a href="#" class="btn btn-outline-primary premium-btn-sm"><i class="bi bi-eye me-1"></i>View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="premium-property-card h-100 animate-slide-in-up delay-1">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=500&fit=crop" class="card-img-top premium-img" alt="Luxury Villa">
+                            <div class="premium-badge position-absolute top-3 start-3 bg-success text-white">
+                                <i class="bi bi-house-heart me-1"></i>Luxury
+                            </div>
+                            <div class="premium-heart position-absolute end-3 top-3">
+                                <i class="bi bi-heart-fill text-danger"></i>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <h5 class="premium-property-title">Elysian Villa Retreat</h5>
+                            <div class="premium-meta d-flex justify-content-between align-items-center mb-2">
+                                <span class="premium-rating"><i class="bi bi-star-fill text-warning"></i> 5.0</span>
+                                <span class="premium-location"><i class="bi bi-geo-alt me-1"></i>Green Haven</span>
+                            </div>
+                            <p class="premium-desc mb-3">5BR | 4BA | 4000 sq ft | Private pool & spa</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h6 class="premium-price mb-0">₹4.2 Cr</h6>
+                                <a href="#" class="btn btn-outline-primary premium-btn-sm"><i class="bi bi-eye me-1"></i>View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="premium-property-card h-100 animate-slide-in-up delay-2">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1536431311711-980b6b6f7a4e?w=800&h=500&fit=crop" class="card-img-top premium-img" alt="Spacious Plot">
+                            <div class="premium-badge position-absolute top-3 start-3 bg-info text-white">
+                                <i class="bi bi-graph-up me-1"></i>Investment
+                            </div>
+                            <div class="premium-heart position-absolute end-3 top-3">
+                                <i class="bi bi-heart"></i>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <h5 class="premium-property-title">Prime Development Plot</h5>
+                            <div class="premium-meta d-flex justify-content-between align-items-center mb-2">
+                                <span class="premium-rating"><i class="bi bi-star-fill text-warning"></i> 4.8</span>
+                                <span class="premium-location"><i class="bi bi-geo-alt me-1"></i>Urban Edge</span>
+                            </div>
+                            <p class="premium-desc mb-3">20,000 sq ft | Zoned residential | High yield potential</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h6 class="premium-price mb-0">₹2.8 Cr</h6>
+                                <a href="#" class="btn btn-outline-primary premium-btn-sm"><i class="bi bi-eye me-1"></i>View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium EMI Calculator with Enhanced UI -->
+    <section id="emi-calculator" class="premium-section py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center premium-heading mb-5 animate-fade-in">Elite Financing Insight</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="premium-calculator-card p-5 animate-slide-in-up">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <label class="form-label premium-label">Loan Amount (₹)</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-currency-rupee"></i></span>
+                                    <input type="number" class="form-control premium-input" id="loanAmount" value="5000000">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label premium-label">Interest Rate (%)</label>
+                                <div class="input-group">
+                                    <input type="number" class="form-control premium-input" id="interestRate" value="7.5" step="0.1">
+                                    <span class="input-group-text">%</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label premium-label">Tenure (Years)</label>
+                                <input type="number" class="form-control premium-input" id="loanTenure" value="20">
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-lg w-100 mt-4 premium-btn" id="calculateEmi">
+                            <i class="bi bi-calculator me-2"></i>Compute Elite EMI
+                        </button>
+                        <div class="alert alert-info text-center premium-result mt-4" role="alert">
+                            <h5 class="mb-0"><i class="bi bi-graph-up-arrow"></i> Monthly EMI: ₹ <span id="emiResult">0</span></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Footer -->
+    <footer class="premium-footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="premium-footer-title"><i class="bi bi-house-heart me-2"></i>Marss Elite</h5>
+                    <p class="premium-footer-text">Elevating real estate to art. Your gateway to timeless legacies.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin fs-4"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h6 class="premium-footer-subtitle">Quick Links</h6>
+                    <ul class="list-unstyled premium-links">
+                        <li><a href="buy.html" class="text-white-50">Premium Buys</a></li>
+                        <li><a href="rent.html" class="text-white-50">Elite Rentals</a></li>
+                        <li><a href="services.html" class="text-white-50">Our Mastery</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h6 class="premium-footer-subtitle">Connect Elite</h6>
+                    <p><i class="bi bi-geo-alt me-2"></i>123 Legacy Lane, Elite City</p>
+                    <p><i class="bi bi-telephone me-2"></i>+91 234 567 8900</p>
+                    <p><i class="bi bi-envelope me-2"></i>elite@marss.com</p>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p class="mb-0 text-white-50">&copy; 2025 Marss. Crafted for Excellence. <a href="#" class="text-gold">Privacy</a> | <a href="#" class="text-gold">Terms</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enhanced FABs -->
+    <div class="fab-container-enhanced">
+        <a href="tel:+912345678900" class="fab premium-fab-primary animate-pulse">
+            <i class="bi bi-telephone me-2"></i>Call Elite
+        </a>
+        <a href="contact.html" class="fab premium-fab-secondary animate-bounce">
+            <i class="bi bi-house-door me-2"></i>Visit Legacy
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
